@@ -16,6 +16,9 @@
 </head>
 <body>
   <div id="game-wrapper">
+    <!-- FLASH DE DANO / ERRO NA TELA -->
+    <div id="damage-flash" class="damage-flash-overlay"></div>
+
     <!-- CANVAS PRINCIPAL DO JOGO (CENÁRIO, TOCAS, GUAXININS, EFEITOS E MARRETA) -->
     <canvas id="game-canvas"></canvas>
 
@@ -67,7 +70,8 @@
         <button id="btn-sound-menu" class="icon-btn floating-sound-btn" type="button" title="Alternar Som">🔊</button>
 
         <h1 class="game-title" data-text="WACKO RACCOON!">WACKO RACCOON!</h1>
-        <p class="game-subtitle">O Arcade Frenético dos Guaxinins Travessos!</p>
+        <p class="game-subtitle">O Arcade Frenético dos Guaxinins Travessos — Edição 10 Fases!</p>
+        <div class="menu-rule-banner">⚠️ Atenção: Não clique em buracos vazios! Bater no vazio tira 1 vida! 💔</div>
 
         <!-- GALERIA DE PERSONAGENS -->
         <div class="cards-grid" id="char-gallery">

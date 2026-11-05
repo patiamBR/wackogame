@@ -9,80 +9,132 @@ const LEVELS = [
   {
     num: 1,
     name: "Quintal Ensolarado",
-    subtitle: "Acerte os Guaxinins travessos antes que fujam!",
+    subtitle: "Acerte os guaxinins! Cuidado: clicar em buraco vazio tira 1 vida!",
     grid: [3, 3],
     duration: 38,
-    targetScore: 850,
-    spawnInterval: [0.85, 1.35],
-    stayTime: [1.25, 1.85],
+    targetScore: 750,
+    spawnInterval: [0.90, 1.35],
+    stayTime: [1.35, 1.85],
     maxActive: 2,
-    weights: { normal: 82, golden: 10, bandit: 8, helmet: 0, bomb: 0, decoy: 0, clock: 0 },
+    weights: { normal: 85, golden: 10, bandit: 5, helmet: 0, bomb: 0, decoy: 0, clock: 0 },
     theme: { sky: [95, 185, 248], hills: [88, 178, 86], lawn: [74, 162, 68], accent: "#ffd73c" },
   },
   {
     num: 2,
     name: "Horta da Vovó",
-    subtitle: "Cuidado com as Bombas! Não bata nelas!",
+    subtitle: "Cuidado com as Bombas e não clique em buracos vazios!",
     grid: [3, 3],
-    duration: 42,
-    targetScore: 1650,
-    spawnInterval: [0.68, 1.15],
-    stayTime: [1.05, 1.55],
+    duration: 40,
+    targetScore: 1400,
+    spawnInterval: [0.80, 1.25],
+    stayTime: [1.20, 1.65],
     maxActive: 3,
-    weights: { normal: 58, bandit: 16, golden: 10, bomb: 13, clock: 3, helmet: 0, decoy: 0 },
+    weights: { normal: 60, bandit: 15, golden: 12, bomb: 9, clock: 4, helmet: 0, decoy: 0 },
     theme: { sky: [115, 200, 242], hills: [102, 174, 74], lawn: [82, 154, 58], accent: "#ffa532" },
   },
   {
     num: 3,
     name: "Acampamento da Floresta",
     subtitle: "Guaxinins de Capacete precisam de 2 marretadas!",
-    grid: [3, 4],
-    duration: 45,
-    targetScore: 2700,
-    spawnInterval: [0.55, 0.95],
-    stayTime: [0.92, 1.40],
-    maxActive: 4,
-    weights: { normal: 42, bandit: 18, helmet: 18, golden: 8, bomb: 10, clock: 4, decoy: 0 },
+    grid: [3, 3],
+    duration: 42,
+    targetScore: 2200,
+    spawnInterval: [0.72, 1.15],
+    stayTime: [1.10, 1.55],
+    maxActive: 3,
+    weights: { normal: 46, bandit: 18, helmet: 16, golden: 10, bomb: 6, clock: 4, decoy: 0 },
     theme: { sky: [238, 148, 96], hills: [78, 134, 74], lawn: [60, 122, 62], accent: "#ff8241" },
   },
   {
     num: 4,
     name: "Noite dos Guaxinins",
-    subtitle: "Proteja a Amiguinha Rosa (Flor)! Bater nela tira pontos!",
+    subtitle: "Proteja a Florzinha rosa! Bater nela tira pontos!",
     grid: [3, 4],
-    duration: 48,
-    targetScore: 4000,
-    spawnInterval: [0.45, 0.82],
-    stayTime: [0.80, 1.25],
+    duration: 44,
+    targetScore: 3000,
+    spawnInterval: [0.65, 1.05],
+    stayTime: [1.05, 1.45],
     maxActive: 4,
-    weights: { normal: 32, bandit: 20, helmet: 18, golden: 9, bomb: 10, decoy: 7, clock: 4 },
+    weights: { normal: 38, bandit: 20, helmet: 16, golden: 10, bomb: 7, decoy: 5, clock: 4 },
     theme: { sky: [28, 38, 78], hills: [38, 74, 78], lawn: [34, 92, 64], accent: "#8cdcff" },
   },
   {
     num: 5,
-    name: "Festival do Caos",
-    subtitle: "Eles fazem fintas rápidas! Fique atento!",
-    grid: [4, 4],
-    duration: 52,
-    targetScore: 5600,
-    spawnInterval: [0.35, 0.68],
-    stayTime: [0.72, 1.12],
-    maxActive: 5,
-    weights: { normal: 26, bandit: 24, helmet: 20, golden: 10, bomb: 10, decoy: 6, clock: 4 },
-    theme: { sky: [64, 34, 88], hills: [64, 78, 54], lawn: [52, 104, 54], accent: "#ff6ec3" },
+    name: "Pântano Misterioso",
+    subtitle: "Fintas rápidas na neblina! Observe com atenção!",
+    grid: [3, 4],
+    duration: 46,
+    targetScore: 3800,
+    spawnInterval: [0.60, 0.98],
+    stayTime: [1.00, 1.40],
+    maxActive: 4,
+    weights: { normal: 34, bandit: 22, helmet: 16, golden: 12, bomb: 7, decoy: 5, clock: 4 },
+    theme: { sky: [46, 68, 64], hills: [52, 92, 70], lawn: [40, 110, 58], accent: "#75ffad" },
   },
   {
     num: 6,
-    name: "Reino do Rei Guaxinim",
-    subtitle: "Desafio Final! Velocidade máxima e chuva de pontos!",
+    name: "Mina Dourada Perdida",
+    subtitle: "Chuva de Guaxinins Dourados! Aproveite para pontuar alto!",
+    grid: [3, 4],
+    duration: 48,
+    targetScore: 4800,
+    spawnInterval: [0.55, 0.92],
+    stayTime: [0.95, 1.35],
+    maxActive: 4,
+    weights: { normal: 26, bandit: 20, helmet: 14, golden: 26, bomb: 6, decoy: 4, clock: 4 },
+    theme: { sky: [78, 54, 30], hills: [96, 72, 38], lawn: [72, 98, 48], accent: "#ffd72d" },
+  },
+  {
+    num: 7,
+    name: "Dunas do Deserto Escaldante",
+    subtitle: "Grade 4x4 ampla! Mantenha a calma e foque nos alvos!",
+    grid: [4, 4],
+    duration: 50,
+    targetScore: 5800,
+    spawnInterval: [0.50, 0.88],
+    stayTime: [0.90, 1.30],
+    maxActive: 5,
+    weights: { normal: 28, bandit: 24, helmet: 18, golden: 14, bomb: 7, decoy: 5, clock: 4 },
+    theme: { sky: [245, 160, 78], hills: [185, 120, 58], lawn: [142, 134, 62], accent: "#ff9d3b" },
+  },
+  {
+    num: 8,
+    name: "Pico Nevado dos Ventos",
+    subtitle: "Congele o tempo com os relógios de gelo antes que o frio vença!",
+    grid: [4, 4],
+    duration: 52,
+    targetScore: 7000,
+    spawnInterval: [0.46, 0.82],
+    stayTime: [0.85, 1.25],
+    maxActive: 5,
+    weights: { normal: 24, bandit: 22, helmet: 18, golden: 14, bomb: 7, decoy: 5, clock: 10 },
+    theme: { sky: [140, 195, 235], hills: [120, 165, 205], lawn: [105, 150, 165], accent: "#82f0ff" },
+  },
+  {
+    num: 9,
+    name: "Vulcão do Trovão",
+    subtitle: "Reflexos rápidos no vulcão! Evite marretar o chão!",
+    grid: [4, 4],
+    duration: 54,
+    targetScore: 8200,
+    spawnInterval: [0.42, 0.78],
+    stayTime: [0.80, 1.20],
+    maxActive: 5,
+    weights: { normal: 22, bandit: 25, helmet: 20, golden: 15, bomb: 8, decoy: 5, clock: 5 },
+    theme: { sky: [58, 22, 28], hills: [88, 34, 42], lawn: [54, 42, 52], accent: "#ff4433" },
+  },
+  {
+    num: 10,
+    name: "Castelo Supremo do Rei Guaxinim",
+    subtitle: "O Grande Duelo Final! Derrote o Rei e conquiste a Coroa!",
     grid: [4, 4],
     duration: 58,
-    targetScore: 7800,
-    spawnInterval: [0.26, 0.54],
-    stayTime: [0.64, 1.00],
+    targetScore: 9600,
+    spawnInterval: [0.38, 0.72],
+    stayTime: [0.75, 1.15],
     maxActive: 6,
-    weights: { normal: 20, bandit: 25, helmet: 22, golden: 13, bomb: 10, decoy: 6, clock: 4 },
-    theme: { sky: [42, 18, 54], hills: [82, 48, 64], lawn: [44, 88, 60], accent: "#ffd72d" },
+    weights: { normal: 20, bandit: 26, helmet: 20, golden: 18, bomb: 8, decoy: 4, clock: 4 },
+    theme: { sky: [38, 16, 52], hills: [74, 38, 78], lawn: [46, 68, 62], accent: "#ffe63b" },
   },
 ];
 
@@ -93,26 +145,504 @@ function getDynamicLevel(levelIdx) {
   const extra = levelIdx - LEVELS.length + 1;
   const base = JSON.parse(JSON.stringify(LEVELS[LEVELS.length - 1]));
   base.num = levelIdx + 1;
-  base.name = `Insanidade Guaxinim #${extra + 1}`;
+  base.name = `Insanidade Guaxinim #${extra}`;
   base.subtitle = "Modo Mestre Infinito — Até onde seus reflexos chegam?";
-  base.targetScore = Math.round(base.targetScore + extra * 2400);
-  const sMin = Math.max(0.18, base.spawnInterval[0] * Math.pow(0.92, extra));
-  const sMax = Math.max(0.35, base.spawnInterval[1] * Math.pow(0.92, extra));
-  const tMin = Math.max(0.48, base.stayTime[0] * Math.pow(0.94, extra));
-  const tMax = Math.max(0.78, base.stayTime[1] * Math.pow(0.94, extra));
+  base.targetScore = Math.round(base.targetScore + extra * 2600);
+  const sMin = Math.max(0.16, base.spawnInterval[0] * Math.pow(0.92, extra));
+  const sMax = Math.max(0.32, base.spawnInterval[1] * Math.pow(0.92, extra));
+  const tMin = Math.max(0.44, base.stayTime[0] * Math.pow(0.94, extra));
+  const tMax = Math.max(0.72, base.stayTime[1] * Math.pow(0.94, extra));
   base.spawnInterval = [sMin, sMax];
   base.stayTime = [tMin, tMax];
-  base.maxActive = Math.min(8, 6 + Math.floor(extra / 2));
+  base.maxActive = Math.min(8, 7 + Math.floor(extra / 2));
   return base;
 }
 
 // ---------------------------------------------------------------------------
-// 2. SINTETIZADOR DE ÁUDIO ARCADE (WEB AUDIO API - ZERO DEPENDÊNCIAS EXTERNAS)
+// 2. MÚSICA TEMÁTICA PROCEDURAL PARA CADA UMA DAS 10 FASES (WEB AUDIO API)
 // ---------------------------------------------------------------------------
+const LEVEL_THEMES = [
+  // Fase 1: Quintal Ensolarado (C Major alegre, clássico arcade estilo parque)
+  {
+    name: "Quintal Alegre",
+    tempo: 130,
+    waveType: "sine",
+    cutoff: 2400,
+    melody: [
+      523.25, null, 659.25, 523.25, 783.99, null, 659.25, null,
+      587.33, null, 523.25, null, 440.00, 493.88, 523.25, null,
+      659.25, null, 659.25, 783.99, 880.00, null, 783.99, null,
+      659.25, 587.33, 523.25, 440.00, 493.88, null, 523.25, null,
+    ],
+    bass: [
+      130.81, null, 130.81, null, 174.61, null, 174.61, null,
+      146.83, null, 146.83, null, 196.00, null, 196.00, null,
+      174.61, null, 174.61, null, 130.81, null, 130.81, null,
+      196.00, null, 196.00, null, 130.81, 164.81, 196.00, 261.63,
+    ],
+    chords: [
+      null, [261.63, 329.63, 392.00], null, [261.63, 329.63, 392.00],
+      null, [349.23, 440.00, 523.25], null, [349.23, 440.00, 523.25],
+      null, [293.66, 349.23, 440.00], null, [293.66, 349.23, 440.00],
+      null, [392.00, 493.88, 587.33], null, [392.00, 493.88, 587.33],
+      null, [349.23, 440.00, 523.25], null, [349.23, 440.00, 523.25],
+      null, [261.63, 329.63, 392.00], null, [261.63, 329.63, 392.00],
+      null, [392.00, 493.88, 587.33], null, [392.00, 493.88, 587.33],
+      null, [261.63, 329.63, 392.00], null, [261.63, 329.63, 392.00],
+    ],
+  },
+  // Fase 2: Horta da Vovó (Valsa campestre caipira 3/4 rápida em F Major)
+  {
+    name: "Horta Caipira",
+    tempo: 138,
+    waveType: "triangle",
+    cutoff: 2100,
+    melody: [
+      349.23, 440.00, 523.25, null, 587.33, 523.25, 440.00, null,
+      392.00, 440.00, 523.25, null, 440.00, 392.00, 349.23, null,
+      349.23, 523.25, 698.46, null, 659.25, 587.33, 523.25, null,
+      587.33, 523.25, 440.00, 392.00, 349.23, null, 349.23, null,
+    ],
+    bass: [
+      174.61, null, 261.63, 261.63, 146.83, null, 220.00, 220.00,
+      196.00, null, 293.66, 293.66, 174.61, null, 261.63, 261.63,
+      174.61, null, 261.63, 261.63, 116.54, null, 233.08, 233.08,
+      196.00, null, 293.66, 293.66, 174.61, 220.00, 261.63, 349.23,
+    ],
+    chords: [
+      null, [349.23, 440.00], [349.23, 440.00], null,
+      null, [293.66, 349.23], [293.66, 349.23], null,
+      null, [392.00, 493.88], [392.00, 493.88], null,
+      null, [349.23, 440.00], [349.23, 440.00], null,
+      null, [349.23, 440.00], [349.23, 440.00], null,
+      null, [233.08, 293.66], [233.08, 293.66], null,
+      null, [392.00, 493.88], [392.00, 493.88], null,
+      null, [349.23, 440.00], [349.23, 440.00], null,
+    ],
+  },
+  // Fase 3: Acampamento da Floresta (Marcha aventureira sincopada em Sol Maior)
+  {
+    name: "Marcha da Floresta",
+    tempo: 132,
+    waveType: "triangle",
+    cutoff: 2300,
+    melody: [
+      392.00, null, 493.88, null, 587.33, null, 659.25, 587.33,
+      493.88, null, 440.00, null, 392.00, 440.00, 493.88, null,
+      587.33, null, 783.99, null, 739.99, null, 659.25, null,
+      587.33, 493.88, 440.00, 493.88, 392.00, null, 392.00, null,
+    ],
+    bass: [
+      98.00, null, 146.83, null, 98.00, null, 146.83, null,
+      82.41, null, 123.47, null, 110.00, null, 146.83, null,
+      98.00, null, 146.83, null, 130.81, null, 164.81, null,
+      146.83, null, 146.83, null, 98.00, 123.47, 146.83, 196.00,
+    ],
+    chords: [
+      null, [392.00, 493.88], null, [392.00, 493.88],
+      null, [329.63, 392.00], null, [329.63, 392.00],
+      null, [440.00, 554.37], null, [440.00, 554.37],
+      null, [392.00, 493.88], null, [392.00, 493.88],
+      null, [392.00, 493.88], null, [392.00, 493.88],
+      null, [329.63, 392.00], null, [329.63, 392.00],
+      null, [293.66, 369.99], null, [293.66, 369.99],
+      null, [392.00, 493.88], null, [392.00, 493.88],
+    ],
+  },
+  // Fase 4: Noite dos Guaxinins (Dança mágica e misteriosa em Lá Menor)
+  {
+    name: "Dança da Meia-Noite",
+    tempo: 122,
+    waveType: "sine",
+    cutoff: 1900,
+    melody: [
+      440.00, null, 523.25, null, 659.25, null, 523.25, null,
+      587.33, null, 493.88, null, 440.00, null, 415.30, null,
+      440.00, 523.25, 659.25, 880.00, 783.99, null, 659.25, null,
+      587.33, null, 523.25, null, 493.88, null, 440.00, null,
+    ],
+    bass: [
+      110.00, null, 164.81, null, 110.00, null, 164.81, null,
+      146.83, null, 174.61, null, 103.83, null, 164.81, null,
+      110.00, null, 164.81, null, 87.31, null, 130.81, null,
+      98.00, null, 146.83, null, 110.00, 130.81, 164.81, 220.00,
+    ],
+    chords: [
+      null, [440.00, 523.25], null, [440.00, 523.25],
+      null, [392.00, 493.88], null, [392.00, 493.88],
+      null, [415.30, 493.88], null, [415.30, 493.88],
+      null, [440.00, 523.25], null, [440.00, 523.25],
+      null, [440.00, 523.25], null, [440.00, 523.25],
+      null, [349.23, 440.00], null, [349.23, 440.00],
+      null, [392.00, 493.88], null, [392.00, 493.88],
+      null, [440.00, 523.25], null, [440.00, 523.25],
+    ],
+  },
+  // Fase 5: Pântano Misterioso (Funk/Groove sincopado em Ré Dórico)
+  {
+    name: "Groove do Pântano",
+    tempo: 125,
+    waveType: "triangle",
+    cutoff: 2100,
+    melody: [
+      293.66, null, 349.23, null, 392.00, 415.30, 440.00, null,
+      392.00, null, 349.23, null, 293.66, null, 261.63, 293.66,
+      349.23, null, 392.00, null, 440.00, null, 523.25, null,
+      440.00, 392.00, 349.23, 293.66, 261.63, null, 293.66, null,
+    ],
+    bass: [
+      73.42, 73.42, null, 87.31, 98.00, null, 103.83, 110.00,
+      73.42, null, 110.00, null, 98.00, null, 87.31, null,
+      73.42, 73.42, null, 87.31, 98.00, null, 110.00, null,
+      130.81, null, 110.00, null, 98.00, 87.31, 73.42, null,
+    ],
+    chords: [
+      null, [293.66, 349.23], null, [293.66, 349.23],
+      null, [349.23, 440.00], null, [349.23, 440.00],
+      null, [261.63, 329.63], null, [261.63, 329.63],
+      null, [293.66, 349.23], null, [293.66, 349.23],
+      null, [293.66, 349.23], null, [293.66, 349.23],
+      null, [392.00, 466.16], null, [392.00, 466.16],
+      null, [349.23, 440.00], null, [349.23, 440.00],
+      null, [293.66, 349.23], null, [293.66, 349.23],
+    ],
+  },
+  // Fase 6: Mina Dourada Perdida (Calypso tropical animado das pepitas de ouro)
+  {
+    name: "Calypso das Pepitas",
+    tempo: 142,
+    waveType: "sine",
+    cutoff: 2600,
+    melody: [
+      523.25, null, 659.25, 783.99, null, 783.99, 880.00, null,
+      783.99, null, 659.25, null, 587.33, 523.25, 587.33, null,
+      659.25, null, 783.99, 880.00, null, 880.00, 1046.5, null,
+      783.99, null, 659.25, null, 587.33, 493.88, 523.25, null,
+    ],
+    bass: [
+      130.81, null, 196.00, null, 130.81, null, 196.00, null,
+      146.83, null, 220.00, null, 196.00, null, 146.83, null,
+      130.81, null, 196.00, null, 174.61, null, 261.63, null,
+      196.00, null, 246.94, null, 130.81, 164.81, 196.00, 261.63,
+    ],
+    chords: [
+      null, [261.63, 329.63, 392.00], null, [261.63, 329.63, 392.00],
+      null, [293.66, 369.99, 440.00], null, [293.66, 369.99, 440.00],
+      null, [392.00, 493.88, 587.33], null, [392.00, 493.88, 587.33],
+      null, [261.63, 329.63, 392.00], null, [261.63, 329.63, 392.00],
+      null, [261.63, 329.63, 392.00], null, [261.63, 329.63, 392.00],
+      null, [349.23, 440.00, 523.25], null, [349.23, 440.00, 523.25],
+      null, [392.00, 493.88, 587.33], null, [392.00, 493.88, 587.33],
+      null, [261.63, 329.63, 392.00], null, [261.63, 329.63, 392.00],
+    ],
+  },
+  // Fase 7: Dunas do Deserto Escaldante (Escala exótica oriental rápida)
+  {
+    name: "Tempestade nas Dunas",
+    tempo: 136,
+    waveType: "sawtooth",
+    cutoff: 1750,
+    melody: [
+      293.66, 311.13, 369.99, null, 392.00, null, 440.00, null,
+      466.16, 440.00, 392.00, 369.99, 311.13, null, 293.66, null,
+      369.99, null, 392.00, null, 440.00, null, 466.16, null,
+      587.33, 466.16, 440.00, 369.99, 311.13, 277.18, 293.66, null,
+    ],
+    bass: [
+      73.42, null, 73.42, null, 77.78, null, 77.78, null,
+      92.50, null, 92.50, null, 73.42, null, 73.42, null,
+      73.42, null, 77.78, null, 92.50, null, 110.00, null,
+      116.54, null, 92.50, null, 77.78, null, 73.42, null,
+    ],
+    chords: [
+      null, [293.66, 369.99], null, [293.66, 369.99],
+      null, [311.13, 392.00], null, [311.13, 392.00],
+      null, [369.99, 440.00], null, [369.99, 440.00],
+      null, [293.66, 369.99], null, [293.66, 369.99],
+      null, [293.66, 369.99], null, [293.66, 369.99],
+      null, [311.13, 392.00], null, [311.13, 392.00],
+      null, [440.00, 466.16], null, [440.00, 466.16],
+      null, [293.66, 369.99], null, [293.66, 369.99],
+    ],
+  },
+  // Fase 8: Pico Nevado dos Ventos (Sinos de gelo cristalinos em Mi Menor)
+  {
+    name: "Cristais de Gelo",
+    tempo: 144,
+    waveType: "triangle",
+    cutoff: 2800,
+    melody: [
+      659.25, null, 783.99, null, 987.77, null, 880.00, null,
+      783.99, null, 659.25, null, 587.33, null, 659.25, null,
+      783.99, null, 987.77, null, 1174.66, null, 987.77, null,
+      880.00, null, 783.99, null, 659.25, 587.33, 659.25, null,
+    ],
+    bass: [
+      82.41, null, 123.47, null, 82.41, null, 123.47, null,
+      104.83, null, 130.81, null, 98.00, null, 146.83, null,
+      82.41, null, 123.47, null, 110.00, null, 164.81, null,
+      123.47, null, 164.81, null, 82.41, 98.00, 123.47, 164.81,
+    ],
+    chords: [
+      null, [329.63, 392.00], null, [329.63, 392.00],
+      null, [261.63, 329.63], null, [261.63, 329.63],
+      null, [293.66, 392.00], null, [293.66, 392.00],
+      null, [329.63, 392.00], null, [329.63, 392.00],
+      null, [329.63, 392.00], null, [329.63, 392.00],
+      null, [440.00, 523.25], null, [440.00, 523.25],
+      null, [493.88, 587.33], null, [493.88, 587.33],
+      null, [329.63, 392.00], null, [329.63, 392.00],
+    ],
+  },
+  // Fase 9: Vulcão do Trovão (Rock arcade pesado e acelerado)
+  {
+    name: "Fúria Magmática",
+    tempo: 146,
+    waveType: "sawtooth",
+    cutoff: 1900,
+    melody: [
+      440.00, 440.00, 523.25, null, 587.33, 622.25, 659.25, null,
+      783.99, null, 659.25, null, 587.33, 523.25, 440.00, null,
+      440.00, 523.25, 587.33, null, 659.25, null, 783.99, null,
+      880.00, null, 783.99, null, 659.25, 587.33, 440.00, null,
+    ],
+    bass: [
+      110.00, 110.00, null, 110.00, 130.81, null, 146.83, 155.56,
+      164.81, null, 164.81, null, 146.83, null, 130.81, null,
+      110.00, 110.00, null, 110.00, 146.83, null, 164.81, null,
+      174.61, null, 164.81, null, 146.83, 130.81, 110.00, null,
+    ],
+    chords: [
+      null, [440.00, 523.25], null, [440.00, 523.25],
+      null, [329.63, 440.00], null, [329.63, 440.00],
+      null, [392.00, 523.25], null, [392.00, 523.25],
+      null, [440.00, 523.25], null, [440.00, 523.25],
+      null, [440.00, 523.25], null, [440.00, 523.25],
+      null, [329.63, 440.00], null, [329.63, 440.00],
+      null, [349.23, 440.00], null, [349.23, 440.00],
+      null, [440.00, 523.25], null, [440.00, 523.25],
+    ],
+  },
+  // Fase 10: Castelo Supremo do Rei Guaxinim (Fanfarra Épica Triunfal)
+  {
+    name: "Fanfarra do Rei Supremo",
+    tempo: 148,
+    waveType: "triangle",
+    cutoff: 2700,
+    melody: [
+      523.25, null, 523.25, 659.25, 783.99, null, 1046.5, null,
+      987.77, null, 880.00, null, 783.99, null, 659.25, null,
+      698.46, 783.99, 880.00, null, 987.77, null, 1046.5, null,
+      1174.66, null, 987.77, null, 1046.5, null, 1046.5, null,
+    ],
+    bass: [
+      130.81, null, 196.00, null, 130.81, null, 196.00, null,
+      174.61, null, 220.00, null, 196.00, null, 246.94, null,
+      174.61, null, 220.00, null, 196.00, null, 246.94, null,
+      130.81, 164.81, 196.00, 246.94, 261.63, null, 261.63, null,
+    ],
+    chords: [
+      null, [261.63, 329.63, 392.00], null, [261.63, 329.63, 392.00],
+      null, [349.23, 440.00, 523.25], null, [349.23, 440.00, 523.25],
+      null, [392.00, 493.88, 587.33], null, [392.00, 493.88, 587.33],
+      null, [261.63, 329.63, 392.00], null, [261.63, 329.63, 392.00],
+      null, [349.23, 440.00, 523.25], null, [349.23, 440.00, 523.25],
+      null, [392.00, 493.88, 587.33], null, [392.00, 493.88, 587.33],
+      null, [293.66, 369.99, 440.00], null, [293.66, 369.99, 440.00],
+      null, [261.63, 329.63, 392.00], null, [261.63, 329.63, 392.00],
+    ],
+  },
+];
+
+class ArcadeMusic {
+  constructor(soundBank) {
+    this.sb = soundBank;
+    this.isPlaying = false;
+    this.step = 0;
+    this.timer = null;
+    this.gainNode = null;
+    this.filterNode = null;
+    this.isFrenzy = false;
+    this.nextNoteTime = 0;
+    this.themeIdx = 0;
+    this.currentTheme = LEVEL_THEMES[0];
+    this.tempo = this.currentTheme.tempo;
+  }
+
+  setLevelTheme(levelIdx) {
+    const idx = Math.max(0, Math.min(LEVEL_THEMES.length - 1, levelIdx));
+    this.themeIdx = idx;
+    this.currentTheme = LEVEL_THEMES[idx];
+    this.tempo = this.currentTheme.tempo;
+    this.step = 0;
+    if (this.filterNode && this.sb.ctx) {
+      this.filterNode.frequency.setValueAtTime(this.currentTheme.cutoff || 2200, this.sb.ctx.currentTime);
+    }
+  }
+
+  ensureNodes() {
+    if (!this.sb.ctx) return false;
+    if (!this.gainNode) {
+      this.gainNode = this.sb.ctx.createGain();
+      this.gainNode.gain.setValueAtTime(this.sb.muted ? 0.0001 : 0.15, this.sb.ctx.currentTime);
+
+      this.filterNode = this.sb.ctx.createBiquadFilter();
+      this.filterNode.type = "lowpass";
+      this.filterNode.frequency.setValueAtTime(this.currentTheme.cutoff || 2200, this.sb.ctx.currentTime);
+
+      this.filterNode.connect(this.gainNode);
+      this.gainNode.connect(this.sb.ctx.destination);
+    }
+    return true;
+  }
+
+  start() {
+    this.sb.init();
+    if (!this.ensureNodes()) return;
+    if (this.isPlaying) return;
+    this.isPlaying = true;
+    this.step = 0;
+    this.nextNoteTime = this.sb.ctx.currentTime + 0.05;
+    this.scheduleLoop();
+  }
+
+  pause() {
+    this.isPlaying = false;
+    if (this.timer) {
+      clearTimeout(this.timer);
+      this.timer = null;
+    }
+  }
+
+  resume() {
+    if (!this.isPlaying) {
+      this.start();
+    }
+  }
+
+  setMuted(muted) {
+    if (!this.gainNode || !this.sb.ctx) return;
+    const now = this.sb.ctx.currentTime;
+    this.gainNode.gain.cancelScheduledValues(now);
+    this.gainNode.gain.linearRampToValueAtTime(muted ? 0.0001 : 0.15, now + 0.05);
+  }
+
+  setFrenzy(frenzy) {
+    this.isFrenzy = frenzy;
+    const baseT = this.currentTheme ? this.currentTheme.tempo : 130;
+    this.tempo = frenzy ? baseT + 22 : baseT;
+  }
+
+  scheduleLoop() {
+    if (!this.isPlaying || !this.sb.ctx) return;
+    const ctx = this.sb.ctx;
+    const baseT = this.currentTheme ? this.currentTheme.tempo : 130;
+    const currentTempo = this.isFrenzy ? baseT + 22 : baseT;
+    const secondsPerBeat = 60.0 / currentTempo;
+    const stepDuration = secondsPerBeat / 4; // 16th note
+
+    while (this.nextNoteTime < ctx.currentTime + 0.20) {
+      this.scheduleStep(this.step, this.nextNoteTime, stepDuration);
+      this.step = (this.step + 1) % 32;
+      this.nextNoteTime += stepDuration;
+    }
+
+    this.timer = setTimeout(() => this.scheduleLoop(), 40);
+  }
+
+  scheduleStep(stepIdx, time, dur) {
+    if (this.sb.muted || !this.filterNode) return;
+    const ctx = this.sb.ctx;
+    const theme = this.currentTheme || LEVEL_THEMES[0];
+
+    // 1. Melodia temática
+    const melNote = theme.melody ? theme.melody[stepIdx] : null;
+    if (melNote) {
+      const osc = ctx.createOscillator();
+      const g = ctx.createGain();
+      osc.type = theme.waveType || "sine";
+      const freq = this.isFrenzy ? melNote * 1.5 : melNote;
+      osc.frequency.setValueAtTime(freq, time);
+
+      g.gain.setValueAtTime(0.001, time);
+      g.gain.linearRampToValueAtTime(0.16, time + 0.012);
+      g.gain.exponentialRampToValueAtTime(0.001, time + dur * 1.35);
+
+      osc.connect(g);
+      g.connect(this.filterNode);
+      osc.start(time);
+      osc.stop(time + dur * 1.35);
+    }
+
+    // 2. Linha de baixo temática
+    const bassNote = theme.bass ? theme.bass[stepIdx] : null;
+    if (bassNote) {
+      const bOsc = ctx.createOscillator();
+      const bG = ctx.createGain();
+      bOsc.type = "triangle";
+      bOsc.frequency.setValueAtTime(bassNote, time);
+
+      bG.gain.setValueAtTime(0.001, time);
+      bG.gain.linearRampToValueAtTime(0.22, time + 0.014);
+      bG.gain.exponentialRampToValueAtTime(0.001, time + dur * 1.5);
+
+      bOsc.connect(bG);
+      bG.connect(this.filterNode);
+      bOsc.start(time);
+      bOsc.stop(time + dur * 1.5);
+    }
+
+    // 3. Acordes harmônicos
+    const ch = theme.chords ? theme.chords[stepIdx] : null;
+    if (ch && Array.isArray(ch)) {
+      ch.forEach((f) => {
+        const cOsc = ctx.createOscillator();
+        const cG = ctx.createGain();
+        cOsc.type = "triangle";
+        cOsc.frequency.setValueAtTime(f, time);
+
+        cG.gain.setValueAtTime(0.001, time);
+        cG.gain.linearRampToValueAtTime(0.055, time + 0.01);
+        cG.gain.exponentialRampToValueAtTime(0.001, time + dur * 1.2);
+
+        cOsc.connect(cG);
+        cG.connect(this.filterNode);
+        cOsc.start(time);
+        cOsc.stop(time + dur * 1.2);
+      });
+    }
+
+    // 4. Ritmo percussivo suave nas contrabatidas
+    if (stepIdx % 2 === 1) {
+      this.playHiHat(time, dur * 0.35);
+    }
+  }
+
+  playHiHat(time, dur) {
+    if (this.sb.muted || !this.sb.ctx) return;
+    const ctx = this.sb.ctx;
+    const bufSize = Math.max(1, Math.floor(ctx.sampleRate * 0.03));
+    const buffer = ctx.createBuffer(1, bufSize, ctx.sampleRate);
+    const data = buffer.getChannelData(0);
+    for (let i = 0; i < bufSize; i++) {
+      data[i] = (Math.random() * 2 - 1) * 0.04;
+    }
+    const noise = ctx.createBufferSource();
+    noise.buffer = buffer;
+    const g = ctx.createGain();
+    g.gain.setValueAtTime(0.03, time);
+    g.gain.exponentialRampToValueAtTime(0.001, time + dur);
+    noise.connect(g);
+    g.connect(this.gainNode);
+    noise.start(time);
+  }
+}
+
 class SoundBank {
   constructor() {
     this.ctx = null;
     this.muted = false;
+    this.music = new ArcadeMusic(this);
   }
 
   init() {
@@ -130,6 +660,7 @@ class SoundBank {
   toggleMute() {
     this.muted = !this.muted;
     this.init();
+    this.music.setMuted(this.muted);
     return this.muted;
   }
 
@@ -207,6 +738,10 @@ class SoundBank {
         break;
       case "bomb":
         this.playTone(175, 34, 0.48, "sawtooth", 0.48, 0.65);
+        break;
+      case "buzzer":
+        // Som cômico de penalidade por bater em buraco vazio
+        this.playTone(190, 75, 0.24, "sawtooth", 0.45, 0.32);
         break;
       case "decoy":
         this.playTone(320, 135, 0.28, "square", 0.32, 0.05);
@@ -373,6 +908,7 @@ class Particle {
       ctx.arc(this.x - r * 0.3, this.y - r * 0.3, Math.max(0.8, r * 0.33), 0, Math.PI * 2);
       ctx.fill();
     }
+
     ctx.restore();
   }
 }
@@ -392,6 +928,8 @@ class BurrowHole {
     this.fakedOut = false;
     this.willFakeout = false;
     this.animTime = Math.random() * 10;
+    this.errorAnim = 0.0; // Temporizador para tremor e feedback de erro
+    this.lastDespawnTime = 0; // Timestamp do último guaxinim que afundou (tolerância para não punir clique atrasado)
   }
 
   spawn(variant, stayDuration, canFakeout = false) {
@@ -408,6 +946,9 @@ class BurrowHole {
 
   update(dt, speedMult = 1.0) {
     this.animTime += dt;
+    if (this.errorAnim > 0) {
+      this.errorAnim = Math.max(0, this.errorAnim - dt);
+    }
     const effDt = dt * speedMult;
     if (this.state === "empty") return null;
 
@@ -437,6 +978,7 @@ class BurrowHole {
       this.progress -= effDt * sinkSpd;
       if (this.progress <= 0.0) {
         this.progress = 0.0;
+        this.lastDespawnTime = performance.now();
         const prevVar = this.variant;
         const wasUnhit = this.hp > 0;
         this.state = "empty";
@@ -449,15 +991,28 @@ class BurrowHole {
   }
 
   containsPoint(px, py) {
-    if (this.state === "empty" || this.state === "bonked" || this.progress < 0.18) {
+    if (this.state === "empty" || this.state === "bonked" || this.progress < 0.06) {
       return false;
     }
     // Hitbox generosa para toque confortável no mobile e precisão no mouse
-    const w = 162 * this.scale;
-    const h = 165 * this.scale * this.progress;
-    const topY = this.y - 125 * this.scale * this.progress - 22 * this.scale;
+    const w = 175 * this.scale;
+    const h = 175 * this.scale * Math.max(0.35, this.progress);
+    const topY = this.y - 130 * this.scale * this.progress - 24 * this.scale;
     const leftX = this.x - w / 2;
-    return px >= leftX && px <= leftX + w && py >= topY && py <= topY + h + 42 * this.scale;
+    return px >= leftX && px <= leftX + w && py >= topY && py <= topY + h + 46 * this.scale;
+  }
+
+  // Verifica se o clique ocorreu sobre o pedestal/compartimento deste buraco
+  containsHole(px, py) {
+    const rx = 106 * this.scale;
+    const ry = 62 * this.scale;
+    const dx = (px - this.x) / rx;
+    const dy = (py - (this.y + 6 * this.scale)) / ry;
+    return dx * dx + dy * dy <= 1.05;
+  }
+
+  distanceTo(px, py) {
+    return Math.hypot(px - this.x, py - this.y);
   }
 }
 
@@ -677,48 +1232,53 @@ class WackoRaccoonWebGame {
     let [rows, cols] = this.lvlCfg.grid;
     const isPortrait = this.vh > this.vw;
 
-    // No celular em modo retrato (vertical), gira a grade 3x4 para 4x3 para aproveitar a tela vertical
+    // No celular em modo retrato (vertical), inverte 3x4 para 4x3 para melhor distribuição vertical
     if (isPortrait && rows < cols) {
       const tmp = rows;
       rows = cols;
       cols = tmp;
     }
 
-    const lawnTop = this.horizonY + (isPortrait ? 34 : 38);
-    const lawnBottom = this.vh - (isPortrait ? 24 : 32);
-    const maxAvailH = Math.max(180, lawnBottom - lawnTop);
-    const maxAvailW = Math.max(220, this.vw * (isPortrait ? 0.94 : 0.82));
+    const lawnTop = this.horizonY + (isPortrait ? 24 : 32);
+    const lawnBottom = this.vh - (isPortrait ? 20 : 28);
+    const availH = Math.max(180, lawnBottom - lawnTop);
+    const availW = Math.max(240, this.vw * (isPortrait ? 0.94 : 0.88));
 
-    // Distância compacta entre buracos (proporcional ao tamanho da toca) para clique/toque rápido
-    const unitColStep = isPortrait ? 192 : 206;
-    const unitRowStep = isPortrait ? 116 : 122;
-    const unitTotalW = (cols - 1) * unitColStep + 215;
-    const unitTotalH = (rows - 1) * unitRowStep + 175;
+    // Distribuição celular uniforme: cada coluna e linha recebe sua célula
+    const cellW = availW / cols;
+    const cellH = availH / rows;
 
-    const scaleByW = maxAvailW / unitTotalW;
-    const scaleByH = maxAvailH / unitTotalH;
-    const baseScale = Math.max(0.42, Math.min(isPortrait ? 0.86 : 0.96, Math.min(scaleByW, scaleByH)));
+    // Garante que o pedestal de cada buraco nunca encoste nos vizinhos (respiro horizontal garantido)
+    const maxHoleW = cellW * 0.76;
+    const maxHoleH = cellH * 0.52;
 
-    const colStep = unitColStep * baseScale;
-    const rowStep = unitRowStep * baseScale;
+    const scaleByW = maxHoleW / 212;
+    const scaleByH = maxHoleH / 106;
+    const maxAllowedScale = isPortrait ? (cols >= 4 ? 0.58 : 0.68) : (cols >= 4 ? 0.75 : 0.88);
+    const baseScale = Math.max(0.30, Math.min(maxAllowedScale, Math.min(scaleByW, scaleByH)));
+
+    // Espaçamento horizontal e vertical otimizado e uniforme
+    const colStep = isPortrait ? cellW : Math.min(225, Math.max(170, cellW * 0.62));
+    const maxGridH = availH * (isPortrait ? 0.72 : 0.68);
+    const rowStep = rows > 1 ? Math.min(isPortrait ? 155 : 135, Math.max(isPortrait ? 98 : 85, maxGridH / (rows - 1))) : 100;
 
     const gridW = (cols - 1) * colStep;
     const gridH = (rows - 1) * rowStep;
 
-    // Centraliza o bloco compacto de buracos no gramado
-    const startX = this.vw / 2 - gridW / 2;
-    const startY = lawnTop + (maxAvailH - gridH) / 2 + 14 * baseScale;
+    // Centraliza o bloco perfeitamente no gramado visível
+    const startX = (this.vw - gridW) / 2;
+    const startY = lawnTop + (availH - gridH) / 2 + (isPortrait ? 12 : 6);
 
-    // Salva retângulo da arena para desenhar o canteiro organizado ao redor das tocas
-    const padX = 118 * baseScale;
-    const padTop = 78 * baseScale;
-    const padBot = 68 * baseScale;
+    // Retângulo da arena principal do canteiro (sombra de chão suave)
+    const padX = 115 * baseScale;
+    const padTop = 75 * baseScale;
+    const padBot = 65 * baseScale;
     this.arenaRect = {
       x: startX - padX,
       y: startY - padTop,
       w: gridW + padX * 2,
       h: gridH + padTop + padBot,
-      r: 28 * baseScale,
+      r: 26 * baseScale,
     };
 
     const totalHoles = rows * cols;
@@ -726,14 +1286,11 @@ class WackoRaccoonWebGame {
 
     let idx = 0;
     for (let r = 0; r < rows; r++) {
-      // Leve perspectiva mantendo alinhamento super organizado
-      const depthFactor = 0.94 + 0.1 * (rows > 1 ? r / (rows - 1) : 0.5);
-      const rowWidth = gridW * (0.95 + 0.05 * (rows > 1 ? r / (rows - 1) : 1));
-      const rowStartX = this.vw / 2 - rowWidth / 2;
-      const effColStep = cols > 1 ? rowWidth / (cols - 1) : 0;
+      // Leve profundidade 3D mantendo o alinhamento perfeitamente organizado
+      const depthFactor = 0.96 + 0.06 * (rows > 1 ? r / (rows - 1) : 0.5);
 
       for (let c = 0; c < cols; c++) {
-        const hx = Math.round(rowStartX + c * effColStep);
+        const hx = Math.round(startX + c * colStep);
         const hy = Math.round(startY + r * rowStep);
         const sc = Number((baseScale * depthFactor).toFixed(3));
 
@@ -1024,6 +1581,7 @@ class WackoRaccoonWebGame {
       this.levelIdx = Math.max(0, this.levelIdx - 1);
       this.lvlCfg = getDynamicLevel(this.levelIdx);
       this.bgCacheKey = "";
+      this.sounds.music.setLevelTheme(this.levelIdx);
       this.updateMenuUI();
     });
 
@@ -1032,11 +1590,17 @@ class WackoRaccoonWebGame {
       this.levelIdx = Math.min(LEVELS.length - 1, this.levelIdx + 1);
       this.lvlCfg = getDynamicLevel(this.levelIdx);
       this.bgCacheKey = "";
+      this.sounds.music.setLevelTheme(this.levelIdx);
       this.updateMenuUI();
     });
 
-    // Botão Jogar Agora
+    // Botão Jogar Agora (bloqueia se a fase ainda não foi liberada)
     document.getElementById("btn-play").addEventListener("click", () => {
+      if (this.levelIdx > this.maxUnlockedLevel) {
+        this.sounds.play("decoy");
+        this.triggerScreenShake(0.25, 8);
+        return;
+      }
       this.sounds.play("click");
       this.setupLevel(this.levelIdx, true);
     });
@@ -1109,8 +1673,21 @@ class WackoRaccoonWebGame {
 
   updateMenuUI() {
     const info = getDynamicLevel(this.levelIdx);
-    this.menuLevelLabel.textContent = `Fase Selecionada: Fase ${info.num} — ${info.name}`;
-    this.menuFooterRecord.innerHTML = `Melhor Pontuação: ${this.highScore} pts &nbsp;|&nbsp; Toque na tela ou use o Mouse / Teclas 1-9!`;
+    const isLocked = this.levelIdx > this.maxUnlockedLevel;
+    const btnPlay = document.getElementById("btn-play");
+    const theme = LEVEL_THEMES[Math.min(LEVEL_THEMES.length - 1, this.levelIdx)];
+    const themeName = theme ? theme.name : "Trilha Clássica";
+
+    if (isLocked) {
+      this.menuLevelLabel.innerHTML = `Fase ${info.num}: ${info.name} <span class="badge-locked">🔒 BLOQUEADA</span>`;
+      btnPlay.classList.add("btn-locked");
+      btnPlay.innerHTML = `FASE BLOQUEADA 🔒`;
+    } else {
+      this.menuLevelLabel.innerHTML = `Fase ${info.num}: ${info.name} <span class="badge-unlocked">🎵 ${themeName}</span>`;
+      btnPlay.classList.remove("btn-locked");
+      btnPlay.innerHTML = `JOGAR AGORA! <span class="play-arrow">&#9654;</span>`;
+    }
+    this.menuFooterRecord.innerHTML = `Melhor Pontuação: ${this.highScore} pts &nbsp;|&nbsp; Progresso: ${Math.min(LEVELS.length, this.maxUnlockedLevel + 1)}/${LEVELS.length} Fases Desbloqueadas`;
   }
 
   renderHeartsHUD() {
@@ -1155,7 +1732,8 @@ class WackoRaccoonWebGame {
   // GERENCIAMENTO DE MODAIS E TRANSIÇÕES DE ESTADO
   // -------------------------------------------------------------------------
   setupLevel(levelIdx, resetTotal = false) {
-    this.levelIdx = levelIdx;
+    // Garante que o jogador não acesse fases não liberadas
+    this.levelIdx = Math.min(levelIdx, this.maxUnlockedLevel);
     if (resetTotal) {
       this.score = 0;
       this.combo = 0;
@@ -1165,7 +1743,7 @@ class WackoRaccoonWebGame {
       this.lives = Math.min(this.maxLives, this.lives + 1);
     }
 
-    this.lvlCfg = getDynamicLevel(levelIdx);
+    this.lvlCfg = getDynamicLevel(this.levelIdx);
     this.timeLeft = this.lvlCfg.duration;
     this.freezeTimer = 0.0;
     this.frenzyTimer = 0.0;
@@ -1174,6 +1752,9 @@ class WackoRaccoonWebGame {
     this.impactBursts = [];
     this.floatingTexts = [];
     this.holes = [];
+
+    // Define a música temática exclusiva da fase
+    this.sounds.music.setLevelTheme(this.levelIdx);
 
     this.hudBar.classList.remove("hud-hidden");
     this.menuScreen.classList.remove("active");
@@ -1192,6 +1773,7 @@ class WackoRaccoonWebGame {
         `Meta de Pontos: ${this.lvlCfg.targetScore} pts`,
         `Tempo da Fase: ${this.lvlCfg.duration} segundos`,
         `Grade de Tocas: ${this.lvlCfg.grid[0]}x${this.lvlCfg.grid[1]}`,
+        `Trilha Sonora: 🎵 ${this.sounds.music.currentTheme.name}`,
       ],
       "COMEÇAR FASE!"
     );
@@ -1215,6 +1797,7 @@ class WackoRaccoonWebGame {
 
   showPauseModal() {
     this.state = "PAUSED";
+    this.sounds.music.pause();
     this.openModal(
       "assets/normal_idle.png",
       "JOGO PAUSADO",
@@ -1230,10 +1813,13 @@ class WackoRaccoonWebGame {
   resumeGame() {
     this.closeModal();
     this.state = "PLAYING";
+    this.sounds.music.setLevelTheme(this.levelIdx);
+    this.sounds.music.resume();
   }
 
   goToMainMenu() {
     this.closeModal();
+    this.sounds.music.pause();
     this.hudBar.classList.add("hud-hidden");
     this.state = "MENU";
     this.lvlCfg = getDynamicLevel(this.levelIdx);
@@ -1246,7 +1832,8 @@ class WackoRaccoonWebGame {
     if (this.state === "LEVEL_INTRO" || this.state === "PAUSED") {
       this.resumeGame();
     } else if (this.state === "LEVEL_CLEAR" || this.state === "VICTORY") {
-      this.setupLevel(this.levelIdx + 1, false);
+      const nextIdx = Math.min(LEVELS.length - 1, this.levelIdx + 1);
+      this.setupLevel(nextIdx, false);
     } else if (this.state === "GAME_OVER") {
       this.setupLevel(this.levelIdx, true);
     }
@@ -1299,9 +1886,33 @@ class WackoRaccoonWebGame {
     } catch (_) {}
   }
 
+  triggerScreenShake(duration = 0.38, magnitude = 15) {
+    this.shakeTimer = duration;
+    this.shakeMag = magnitude;
+    const wrapper = document.getElementById("game-wrapper");
+    if (wrapper) {
+      wrapper.classList.remove("screen-shake");
+      void wrapper.offsetWidth; // Força reflow para reiniciar animação CSS
+      wrapper.classList.add("screen-shake");
+      setTimeout(() => wrapper.classList.remove("screen-shake"), 390);
+    }
+  }
+
+  triggerDamageFlash() {
+    const flashEl = document.getElementById("damage-flash");
+    if (flashEl) {
+      flashEl.classList.remove("damage-flash-active");
+      void flashEl.offsetWidth; // Força reflow
+      flashEl.classList.add("damage-flash-active");
+      setTimeout(() => flashEl.classList.remove("damage-flash-active"), 280);
+    }
+    this.damageFlashTimer = 0.28;
+  }
+
   triggerWhack(mx, my) {
     this.malletAnim = 0.16;
 
+    // 1. Procurar se acertou algum guaxinim ativo (da frente para trás)
     let hitHole = null;
     let bestDist = Infinity;
     for (let i = this.holes.length - 1; i >= 0; i--) {
@@ -1317,6 +1928,87 @@ class WackoRaccoonWebGame {
     }
 
     if (!hitHole) {
+      // O jogador não acertou nenhum guaxinim ativo!
+      // REGRA: Se o jogador clicar num buraco onde não tem nada, perde 1 vida!
+      let emptyHole = null;
+      let closestDist = Infinity;
+
+      for (let i = 0; i < this.holes.length; i++) {
+        const h = this.holes[i];
+        if (h.containsHole(mx, my)) {
+          emptyHole = h;
+          break;
+        }
+        const d = h.distanceTo(mx, my);
+        if (d < closestDist) {
+          closestDist = d;
+          if (d <= 92 * h.scale) {
+            emptyHole = h;
+          }
+        }
+      }
+
+      if (emptyHole) {
+        // Tolerância justa: se o guaxinim acabou de afundar nos últimos 280ms, perdoa a vida!
+        if (performance.now() - emptyHole.lastDespawnTime < 280) {
+          this.sounds.play("whoosh");
+          this.floatingTexts.push(
+            new FloatingText(emptyHole.x, emptyHole.y - 20 * emptyHole.scale, "QUASE!", "#ffea00", 24)
+          );
+          return;
+        }
+
+        // PUNIÇÃO: Errou o buraco / clicou no buraco vazio!
+        this.sounds.play("buzzer");
+        this.vibrateDevice([70, 40, 90]);
+        this.triggerScreenShake(0.38, 15);
+        this.triggerDamageFlash();
+
+        emptyHole.errorAnim = 0.48;
+        this.combo = 0;
+        this.lives = Math.max(0, this.lives - 1);
+        this.renderHeartsHUD();
+        this.updateHUD();
+
+        const hx = emptyHole.x;
+        const hy = emptyHole.y - 12 * emptyHole.scale;
+
+        this.impactBursts.push(
+          new ImpactBurstEffect(hx, hy, this.images["burst_red"], "#ff3333", emptyHole.scale * 0.92)
+        );
+        this.floatingTexts.push(
+          new FloatingText(hx, hy - 22, "ERROU! -1 VIDA 💔", "#ff3333", 32)
+        );
+
+        const cols = ["#ff3b30", "#ff7373", "#ffffff", "#4a4a4a"];
+        for (let i = 0; i < 22; i++) {
+          this.particles.push(
+            new Particle(hx, hy, cols[i % cols.length], [80, 260], [4, 9], true, emptyHole.scale)
+          );
+        }
+
+        if (this.lives <= 0) {
+          this.sounds.play("gameover");
+          this.sounds.music.pause();
+          this.saveProgress();
+          this.state = "GAME_OVER";
+          this.openModal(
+            "assets/normal_dizzy.png",
+            "FIM DE JOGO!",
+            "Suas vidas acabaram ao errar os buracos vazios!",
+            [
+              `Pontuação Alcançada: ${this.score} pts`,
+              `Meta da Fase ${this.lvlCfg.num}: ${this.lvlCfg.targetScore} pts`,
+              `Melhor Combo: ${this.maxCombo}x`,
+              "Dica de Ouro: Espere o guaxinim subir antes de marretar!",
+            ],
+            "TENTAR NOVAMENTE!"
+          );
+        }
+        return;
+      }
+
+      // Se clicou completamente fora da arena de jogo (ex: topo do céu)
       this.sounds.play("miss");
       for (let i = 0; i < 6; i++) {
         this.particles.push(new Particle(mx, my + 8, "#7db95a", [35, 95], [3, 6], false, this.uiScale));
@@ -1336,8 +2028,8 @@ class WackoRaccoonWebGame {
       this.combo = 0;
       this.lives = Math.max(0, this.lives - 1);
       this.score = Math.max(0, this.score - 150);
-      this.shakeTimer = 0.4;
-      this.shakeMag = 14;
+      this.triggerScreenShake(0.42, 16);
+      this.triggerDamageFlash();
       this.renderHeartsHUD();
       this.updateHUD();
 
@@ -1353,6 +2045,7 @@ class WackoRaccoonWebGame {
 
       if (this.lives <= 0) {
         this.sounds.play("gameover");
+        this.sounds.music.pause();
         this.saveProgress();
         this.state = "GAME_OVER";
         this.openModal(
@@ -1377,8 +2070,7 @@ class WackoRaccoonWebGame {
       hitHole.timer = 0.45;
       this.combo = 0;
       this.score = Math.max(0, this.score - 120);
-      this.shakeTimer = 0.22;
-      this.shakeMag = 8;
+      this.triggerScreenShake(0.24, 8);
       this.updateHUD();
 
       this.impactBursts.push(
@@ -1423,6 +2115,7 @@ class WackoRaccoonWebGame {
     if (this.combo > 0 && this.combo % 10 === 0) {
       this.frenzyTimer = 5.5;
       this.sounds.play("frenzy");
+      this.sounds.music.setFrenzy(true);
       this.floatingTexts.push(
         new FloatingText(this.vw / 2, this.horizonY + 12, "MODO FRENESI WACKO! 2X PONTOS!", "#ffeb37", 36)
       );
@@ -1537,8 +2230,16 @@ class WackoRaccoonWebGame {
       this.frenzyTimer = Math.max(0, this.frenzyTimer - dt);
     }
 
+    if (this.damageFlashTimer > 0) {
+      this.damageFlashTimer = Math.max(0, this.damageFlashTimer - dt);
+    }
+
     const timeRate = this.freezeTimer > 0 ? 0.25 : 1.0;
     this.timeLeft -= dt * timeRate;
+
+    if (this.frenzyTimer <= 0 && this.sounds.music.isFrenzy) {
+      this.sounds.music.setFrenzy(false);
+    }
 
     const raccoonSpeed = this.freezeTimer > 0 ? 0.48 : 1.0;
     this.holes.forEach((hole) => {
@@ -1565,22 +2266,27 @@ class WackoRaccoonWebGame {
     if (this.timeLeft <= 0) {
       this.timeLeft = 0;
       this.updateHUD();
-      this.saveProgress();
 
       if (this.score >= this.lvlCfg.targetScore) {
         this.sounds.play("levelup");
+        this.sounds.music.pause();
+        // Desbloqueia a próxima fase com sucesso!
+        this.maxUnlockedLevel = Math.max(this.maxUnlockedLevel, this.levelIdx + 1);
+        this.saveProgress();
+
         if (this.levelIdx === LEVELS.length - 1) {
           this.state = "VICTORY";
           this.openModal(
             "assets/golden_laugh.png",
-            "CAMPEÃO DE WACKO RACCOON!",
-            "Você venceu todas as 6 fases principais! Quer encarar o Modo Infinito?",
+            "👑 CAMPEÃO SUPREMO DE WACKO RACCOON!",
+            "Você venceu com glória todas as 10 fases do jogo! É o Maior Marretador de Todos!",
             [
               `Pontuação Final: ${this.score} pts`,
               `Maior Combo: ${this.maxCombo}x`,
               `Novo Recorde: ${this.highScore} pts`,
+              "Troféu Dourado: Mestre dos Guaxinins Conquistado! 🏆",
             ],
-            "CONTINUAR NO MODO INFINITO! >>"
+            "JOGAR MODO INFINITO! >>"
           );
         } else {
           this.state = "LEVEL_CLEAR";
@@ -1591,13 +2297,14 @@ class WackoRaccoonWebGame {
             [
               `Pontuação Total: ${this.score} pts`,
               `Combo Máximo: ${this.maxCombo}x`,
-              "Bônus: +1 Vida Recuperada!",
+              "Bônus: +1 Vida Recuperada! ❤️",
             ],
             `PRÓXIMA FASE: FASE ${this.lvlCfg.num + 1} >>`
           );
         }
       } else {
         this.sounds.play("gameover");
+        this.sounds.music.pause();
         this.state = "GAME_OVER";
         const diff = Math.max(0, this.lvlCfg.targetScore - this.score);
         this.openModal(
@@ -1608,6 +2315,7 @@ class WackoRaccoonWebGame {
             `Pontuação Alcançada: ${this.score} pts`,
             `Meta da Fase ${this.lvlCfg.num}: ${this.lvlCfg.targetScore} pts`,
             `Melhor Combo: ${this.maxCombo}x`,
+            "Dica: Acerte os guaxinins e evite buracos vazios!",
           ],
           "TENTAR NOVAMENTE!"
         );
@@ -1621,6 +2329,91 @@ class WackoRaccoonWebGame {
     const bx = hole.x - bw / 2;
     const by = hole.y - bh / 2;
 
+    // 1. MOLDURA / COMPARTIMENTO INDIVIDUAL DO BURACO
+    // Cria um pedestal destacado para cada toca, mantendo tudo super organizado e nítido
+    ctx.save();
+    let frameOffsetX = 0;
+    let frameOffsetY = 0;
+    if (hole.errorAnim > 0) {
+      // Tremor visual exclusivo no buraco onde o jogador errou
+      frameOffsetX = (Math.random() * 2 - 1) * 6;
+      frameOffsetY = (Math.random() * 2 - 1) * 6;
+    }
+
+    const fw = 212 * hole.scale;
+    const fh = 106 * hole.scale;
+    const fcx = hole.x + frameOffsetX;
+    const fcy = hole.y + 6 * hole.scale + frameOffsetY;
+
+    // Sombra suave do pedestal individual
+    ctx.fillStyle = "rgba(0, 0, 0, 0.28)";
+    ctx.beginPath();
+    ctx.ellipse(fcx, fcy + 8 * hole.scale, fw * 0.52, fh * 0.44, 0, 0, Math.PI * 2);
+    ctx.fill();
+
+    // Base do pedestal (madeira tratada ou alerta vermelho se errou)
+    const pedestalGrad = ctx.createLinearGradient(fcx, fcy - fh * 0.5, fcx, fcy + fh * 0.5);
+    if (hole.errorAnim > 0) {
+      pedestalGrad.addColorStop(0, "#e53935");
+      pedestalGrad.addColorStop(1, "#8e0000");
+    } else {
+      pedestalGrad.addColorStop(0, "#5a341e");
+      pedestalGrad.addColorStop(0.5, "#422413");
+      pedestalGrad.addColorStop(1, "#2c170a");
+    }
+    ctx.fillStyle = pedestalGrad;
+    ctx.beginPath();
+    ctx.ellipse(fcx, fcy, fw * 0.50, fh * 0.42, 0, 0, Math.PI * 2);
+    ctx.fill();
+
+    // Borda chanfrada dourada / bronze com relevo 3D
+    ctx.lineWidth = Math.max(2, 3.2 * hole.scale);
+    ctx.strokeStyle = hole.errorAnim > 0 ? "#ff9999" : "#e4aa4c";
+    ctx.stroke();
+
+    // Chanfro interno
+    ctx.lineWidth = Math.max(1, 1.6 * hole.scale);
+    ctx.strokeStyle = hole.errorAnim > 0 ? "#ff3333" : "rgba(255, 235, 160, 0.35)";
+    ctx.beginPath();
+    ctx.ellipse(fcx, fcy - 2 * hole.scale, fw * 0.46, fh * 0.38, 0, 0, Math.PI * 2);
+    ctx.stroke();
+
+    // Rebites decorativos nos 4 cantos do pedestal
+    const rivetDistX = fw * 0.42;
+    const rivetDistY = fh * 0.24;
+    const rRadius = Math.max(2, 3.5 * hole.scale);
+    const rivetColor = hole.errorAnim > 0 ? "#ffcccc" : "#ffe175";
+    [
+      [fcx - rivetDistX, fcy - rivetDistY],
+      [fcx + rivetDistX, fcy - rivetDistY],
+      [fcx - rivetDistX, fcy + rivetDistY],
+      [fcx + rivetDistX, fcy + rivetDistY],
+    ].forEach(([rx, ry]) => {
+      ctx.fillStyle = "#1e1008";
+      ctx.beginPath();
+      ctx.arc(rx, ry + 1, rRadius, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.fillStyle = rivetColor;
+      ctx.beginPath();
+      ctx.arc(rx, ry, rRadius * 0.85, 0, Math.PI * 2);
+      ctx.fill();
+    });
+
+    // Se houve erro no buraco: desenha rachaduras / símbolo 'X' branco
+    if (hole.errorAnim > 0) {
+      ctx.strokeStyle = "#ffffff";
+      ctx.lineWidth = Math.max(3, 4.5 * hole.scale);
+      ctx.beginPath();
+      const crossSize = 22 * hole.scale;
+      ctx.moveTo(fcx - crossSize, fcy - crossSize * 0.7);
+      ctx.lineTo(fcx + crossSize, fcy + crossSize * 0.7);
+      ctx.moveTo(fcx + crossSize, fcy - crossSize * 0.7);
+      ctx.lineTo(fcx - crossSize, fcy + crossSize * 0.7);
+      ctx.stroke();
+    }
+    ctx.restore();
+
+    // 2. FUNDO DA TOCA (HOLE_BACK)
     const backImg = this.images["hole_back"];
     const frontImg = this.images["hole_front"];
 
@@ -1628,6 +2421,7 @@ class WackoRaccoonWebGame {
       ctx.drawImage(backImg, bx, by, bw, bh);
     }
 
+    // 3. GUAXINIM (SE ATIVO E VISÍVEL)
     if (hole.state !== "empty" && hole.progress > 0.01) {
       const sprState =
         hole.state === "bonked" ? "dizzy" : hole.progress > 0.85 ? "laugh" : "idle";
@@ -1666,22 +2460,37 @@ class WackoRaccoonWebGame {
       }
     }
 
+    // 4. FRENTE DA TOCA (HOLE_FRONT)
     if (frontImg && frontImg.complete) {
       ctx.drawImage(frontImg, bx, by, bw, bh);
     }
 
-    if (hole.idx < 9 && this.state === "PLAYING" && !this.isTouchDevice) {
+    // 5. BADGE ORGANIZADO DE IDENTIFICAÇÃO DO BURACO
+    if (this.state === "PLAYING") {
       const badgeX = hole.x;
-      const badgeY = hole.y + 30 * hole.scale;
+      const badgeY = hole.y + 36 * hole.scale;
+      const badgeR = Math.max(10, 13 * hole.scale);
+
       ctx.save();
-      ctx.font = `800 ${Math.max(11, Math.round(14 * hole.scale))}px 'Nunito', sans-serif`;
+      ctx.fillStyle = "#1e1008";
+      ctx.beginPath();
+      ctx.arc(badgeX, badgeY + 1, badgeR + 1, 0, Math.PI * 2);
+      ctx.fill();
+
+      ctx.fillStyle = hole.errorAnim > 0 ? "#ff4444" : "#422514";
+      ctx.beginPath();
+      ctx.arc(badgeX, badgeY, badgeR, 0, Math.PI * 2);
+      ctx.fill();
+
+      ctx.lineWidth = Math.max(1, 1.5 * hole.scale);
+      ctx.strokeStyle = hole.errorAnim > 0 ? "#ffffff" : "#ebaf4e";
+      ctx.stroke();
+
+      ctx.font = `900 ${Math.max(10, Math.round(13 * hole.scale))}px 'Nunito', sans-serif`;
       ctx.textAlign = "center";
       ctx.textBaseline = "middle";
-      ctx.lineWidth = 3;
-      ctx.strokeStyle = "#26160c";
-      ctx.strokeText(String(hole.idx + 1), badgeX, badgeY);
-      ctx.fillStyle = "#f5e8cd";
-      ctx.fillText(String(hole.idx + 1), badgeX, badgeY);
+      ctx.fillStyle = hole.errorAnim > 0 ? "#ffffff" : "#ffe79a";
+      ctx.fillText(String(hole.idx + 1), badgeX, badgeY + 0.5);
       ctx.restore();
     }
   }
@@ -1774,6 +2583,13 @@ class WackoRaccoonWebGame {
         ctx.drawImage(mImg, this.pointerX - mSize * 0.38, this.pointerY - mSize * 0.48, mSize, mSize);
         ctx.restore();
       }
+    }
+
+    // 7. Flash Vermelho de Dano na Tela
+    if (this.damageFlashTimer > 0) {
+      const alpha = Math.min(0.38, this.damageFlashTimer * 1.4);
+      ctx.fillStyle = `rgba(255, 30, 30, ${alpha.toFixed(2)})`;
+      ctx.fillRect(0, 0, this.vw, this.vh);
     }
 
     ctx.restore();
