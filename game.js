@@ -677,41 +677,64 @@ class WackoRaccoonWebGame {
     let [rows, cols] = this.lvlCfg.grid;
     const isPortrait = this.vh > this.vw;
 
-    // No celular em modo retrato (vertical), gira a grade 3x4 para 4x3 para aproveitar toda a tela vertical!
+    // No celular em modo retrato (vertical), gira a grade 3x4 para 4x3 para aproveitar a tela vertical
     if (isPortrait && rows < cols) {
       const tmp = rows;
       rows = cols;
       cols = tmp;
     }
 
-    const playTop = this.horizonY + (isPortrait ? 58 : 54);
-    const playBottom = this.vh - (isPortrait ? 52 : 58);
-    const availH = Math.max(160, playBottom - playTop);
+    const lawnTop = this.horizonY + (isPortrait ? 34 : 38);
+    const lawnBottom = this.vh - (isPortrait ? 24 : 32);
+    const maxAvailH = Math.max(180, lawnBottom - lawnTop);
+    const maxAvailW = Math.max(220, this.vw * (isPortrait ? 0.94 : 0.82));
 
-    const sideMargin = Math.max(54, Math.min(155, this.vw * (isPortrait ? 0.14 : 0.135)));
-    const playLeft = sideMargin;
-    const playRight = this.vw - sideMargin;
-    const availW = Math.max(160, playRight - playLeft);
+    // Distância compacta entre buracos (proporcional ao tamanho da toca) para clique/toque rápido
+    const unitColStep = isPortrait ? 192 : 206;
+    const unitRowStep = isPortrait ? 116 : 122;
+    const unitTotalW = (cols - 1) * unitColStep + 215;
+    const unitTotalH = (rows - 1) * unitRowStep + 175;
 
-    const rowStep = rows > 1 ? availH / (rows - 1) : 0;
-    const colStep = cols > 1 ? availW / (cols - 1) : 0;
+    const scaleByW = maxAvailW / unitTotalW;
+    const scaleByH = maxAvailH / unitTotalH;
+    const baseScale = Math.max(0.42, Math.min(isPortrait ? 0.86 : 0.96, Math.min(scaleByW, scaleByH)));
 
-    // Calcula escala ideal de cada toca para caber com folga tanto em largura quanto em altura
-    const maxHoleW = cols > 1 ? colStep * 0.88 : availW * 0.6;
-    const maxHoleH = rows > 1 ? rowStep * 0.92 : availH * 0.6;
-    const scaleByW = maxHoleW / 225;
-    const scaleByH = maxHoleH / 145;
-    const baseScale = Math.max(0.38, Math.min(1.08, Math.min(scaleByW, scaleByH)));
+    const colStep = unitColStep * baseScale;
+    const rowStep = unitRowStep * baseScale;
+
+    const gridW = (cols - 1) * colStep;
+    const gridH = (rows - 1) * rowStep;
+
+    // Centraliza o bloco compacto de buracos no gramado
+    const startX = this.vw / 2 - gridW / 2;
+    const startY = lawnTop + (maxAvailH - gridH) / 2 + 14 * baseScale;
+
+    // Salva retângulo da arena para desenhar o canteiro organizado ao redor das tocas
+    const padX = 118 * baseScale;
+    const padTop = 78 * baseScale;
+    const padBot = 68 * baseScale;
+    this.arenaRect = {
+      x: startX - padX,
+      y: startY - padTop,
+      w: gridW + padX * 2,
+      h: gridH + padTop + padBot,
+      r: 28 * baseScale,
+    };
 
     const totalHoles = rows * cols;
     const newHoles = [];
 
     let idx = 0;
     for (let r = 0; r < rows; r++) {
+      // Leve perspectiva mantendo alinhamento super organizado
+      const depthFactor = 0.94 + 0.1 * (rows > 1 ? r / (rows - 1) : 0.5);
+      const rowWidth = gridW * (0.95 + 0.05 * (rows > 1 ? r / (rows - 1) : 1));
+      const rowStartX = this.vw / 2 - rowWidth / 2;
+      const effColStep = cols > 1 ? rowWidth / (cols - 1) : 0;
+
       for (let c = 0; c < cols; c++) {
-        const depthFactor = 0.9 + 0.16 * (rows > 1 ? r / (rows - 1) : 0.5);
-        const hx = Math.round(playLeft + c * colStep);
-        const hy = Math.round(playTop + r * rowStep);
+        const hx = Math.round(rowStartX + c * effColStep);
+        const hy = Math.round(startY + r * rowStep);
         const sc = Number((baseScale * depthFactor).toFixed(3));
 
         if (this.holes[idx]) {
@@ -1280,10 +1303,16 @@ class WackoRaccoonWebGame {
     this.malletAnim = 0.16;
 
     let hitHole = null;
+    let bestDist = Infinity;
     for (let i = this.holes.length - 1; i >= 0; i--) {
-      if (this.holes[i].containsPoint(mx, my)) {
-        hitHole = this.holes[i];
-        break;
+      const h = this.holes[i];
+      if (h.containsPoint(mx, my)) {
+        const targetY = h.y - 45 * h.scale;
+        const dist = Math.hypot(mx - h.x, my - targetY);
+        if (dist < bestDist) {
+          bestDist = dist;
+          hitHole = h;
+        }
       }
     }
 
@@ -1697,6 +1726,18 @@ class WackoRaccoonWebGame {
 
     // 4. Tocas e Guaxinins (apenas fora do menu inicial)
     if (this.state !== "MENU") {
+      if (this.arenaRect) {
+        ctx.save();
+        ctx.fillStyle = "rgba(0, 0, 0, 0.08)";
+        ctx.beginPath();
+        if (ctx.roundRect) {
+          ctx.roundRect(this.arenaRect.x, this.arenaRect.y, this.arenaRect.w, this.arenaRect.h, this.arenaRect.r);
+        } else {
+          ctx.rect(this.arenaRect.x, this.arenaRect.y, this.arenaRect.w, this.arenaRect.h);
+        }
+        ctx.fill();
+        ctx.restore();
+      }
       this.holes.forEach((hole) => this.drawHoleAndRaccoon(ctx, hole));
       this.impactBursts.forEach((ib) => ib.draw(ctx));
       this.particles.forEach((p) => p.draw(ctx));
