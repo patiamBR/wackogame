@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <meta name="theme-color" content="#3b2314" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="description" content="Wacko Raccoon! - O Arcade Frenético dos Guaxinins Travessos em Edição Deluxe HD." />
+  <title>WACKO RACCOON! - Edição Deluxe HD</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Nunito:wght@700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="game-wrapper">
+    <!-- CANVAS PRINCIPAL DO JOGO (CENÁRIO, TOCAS, GUAXININS, EFEITOS E MARRETA) -->
+    <canvas id="game-canvas"></canvas>
+
+    <!-- HUD SUPERIOR RESPONSIVO (DESKTOP & MOBILE) -->
+    <header id="hud-bar" class="wood-panel hud-hidden" aria-label="Painel de Status da Partida">
+      <div class="rivet r-tl"></div>
+      <div class="rivet r-tr"></div>
+      <div class="rivet r-bl"></div>
+      <div class="rivet r-br"></div>
+
+      <div class="hud-section hud-left">
+        <div id="hud-level-title" class="arcade-text">FASE 1: Quintal Ensolarado</div>
+        <div class="progress-container">
+          <div id="hud-progress-fill" class="progress-fill"></div>
+          <span id="hud-score-text" class="progress-label">PONTOS: 0 / 850</span>
+        </div>
+      </div>
+
+      <div class="hud-section hud-center">
+        <div id="hud-combo" class="arcade-text combo-text">COMBO: 0x</div>
+        <div id="hud-substatus" class="hud-subtext">Recorde: 0 pts</div>
+      </div>
+
+      <div class="hud-section hud-lives">
+        <span class="lives-label">VIDAS (BOMBAS):</span>
+        <div id="hud-hearts" class="hearts-row"></div>
+      </div>
+
+      <div class="hud-section hud-right">
+        <div class="timer-box">
+          <span class="timer-label">TEMPO</span>
+          <span id="hud-timer" class="arcade-text timer-val">38s</span>
+        </div>
+        <div class="hud-actions">
+          <button id="btn-sound-hud" class="icon-btn" type="button" title="Alternar Som" aria-label="Alternar Som">🔊</button>
+          <button id="btn-pause-hud" class="icon-btn" type="button" title="Pausar Jogo" aria-label="Pausar Jogo">⏸️</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- TELA DE MENU PRINCIPAL -->
+    <section id="menu-screen" class="overlay-screen active">
+      <div class="wood-panel menu-panel">
+        <div class="rivet r-tl"></div>
+        <div class="rivet r-tr"></div>
+        <div class="rivet r-bl"></div>
+        <div class="rivet r-br"></div>
+
+        <button id="btn-sound-menu" class="icon-btn floating-sound-btn" type="button" title="Alternar Som">🔊</button>
+
+        <h1 class="game-title" data-text="WACKO RACCOON!">WACKO RACCOON!</h1>
+        <p class="game-subtitle">O Arcade Frenético dos Guaxinins Travessos!</p>
+
+        <!-- GALERIA DE PERSONAGENS -->
+        <div class="cards-grid" id="char-gallery">
+          <div class="char-card" style="--card-accent: #aff59b;">
+            <div class="char-img-box"><img src="assets/normal_idle.png" alt="Guaxinim" /></div>
+            <span class="char-name">Guaxinim</span>
+            <span class="char-desc">+100 pts</span>
+          </div>
+          <div class="char-card" style="--card-accent: #d2afff;">
+            <div class="char-img-box"><img src="assets/bandit_idle.png" alt="Bandido" /></div>
+            <span class="char-name">Bandido</span>
+            <span class="char-desc">+150 pts</span>
+          </div>
+          <div class="char-card" style="--card-accent: #ffdc69;">
+            <div class="char-img-box"><img src="assets/helmet_idle.png" alt="Capacete 2x" /></div>
+            <span class="char-name">Capacete 2x</span>
+            <span class="char-desc">+150 pts</span>
+          </div>
+          <div class="char-card" style="--card-accent: #ffeb4b;">
+            <div class="char-img-box"><img src="assets/golden_idle.png" alt="Rei Dourado" /></div>
+            <span class="char-name">Rei Dourado</span>
+            <span class="char-desc">+300 pts</span>
+          </div>
+          <div class="char-card" style="--card-accent: #87ebff;">
+            <div class="char-img-box"><img src="assets/clock_idle.png" alt="Gelo Tempo" /></div>
+            <span class="char-name">Gelo Tempo</span>
+            <span class="char-desc">+4s Tempo</span>
+          </div>
+          <div class="char-card" style="--card-accent: #ff9bc3;">
+            <div class="char-img-box"><img src="assets/decoy_idle.png" alt="Amiga Flor" /></div>
+            <span class="char-name">Amiga Flor</span>
+            <span class="char-desc">NÃO BATA!</span>
+          </div>
+          <div class="char-card" style="--card-accent: #ff6e5f;">
+            <div class="char-img-box"><img src="assets/bomb_idle.png" alt="Bomba!" /></div>
+            <span class="char-name">Bomba!</span>
+            <span class="char-desc">-1 Vida!</span>
+          </div>
+        </div>
+
+        <!-- SELETOR DE FASE -->
+        <div class="level-selector">
+          <button id="btn-prev-lvl" class="glossy-btn btn-wood btn-nav" type="button" aria-label="Fase Anterior">&lt;</button>
+          <div id="menu-level-label" class="level-selected-text">Fase Selecionada: Fase 1 — Quintal Ensolarado</div>
+          <button id="btn-next-lvl" class="glossy-btn btn-wood btn-nav" type="button" aria-label="Próxima Fase">&gt;</button>
+        </div>
+
+        <!-- BOTÕES DE AÇÃO -->
+        <div class="menu-actions">
+          <button id="btn-play" class="glossy-btn btn-green btn-large" type="button">JOGAR AGORA!</button>
+        </div>
+
+        <p id="menu-footer-record" class="menu-footer">
+          Melhor Pontuação: 0 pts &nbsp;|&nbsp; Toque na tela ou use o Mouse / Teclas 1-9!
+        </p>
+      </div>
+    </section>
+
+    <!-- MODAL DE FASE / PAUSA / VITÓRIA / FIM DE JOGO -->
+    <section id="modal-screen" class="overlay-screen">
+      <div class="wood-panel modal-panel">
+        <div class="rivet r-tl"></div>
+        <div class="rivet r-tr"></div>
+        <div class="rivet r-bl"></div>
+        <div class="rivet r-br"></div>
+
+        <div class="modal-mascot-wrap">
+          <img id="modal-mascot" src="assets/normal_laugh.png" alt="Mascote Guaxinim" />
+        </div>
+
+        <h2 id="modal-title" class="modal-title">FASE 1: Quintal Ensolarado</h2>
+        <p id="modal-subtitle" class="modal-subtitle">Acerte os Guaxinins travessos antes que fujam!</p>
+
+        <div id="modal-stats" class="modal-stats"></div>
+
+        <div class="modal-buttons">
+          <button id="btn-modal-primary" class="glossy-btn btn-green btn-modal-main" type="button">COMEÇAR FASE!</button>
+          <button id="btn-modal-secondary" class="glossy-btn btn-wood btn-modal-sub" type="button">MENU PRINCIPAL</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
